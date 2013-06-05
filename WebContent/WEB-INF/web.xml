@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xmlns="http://java.sun.com/xml/ns/javaee" 
+					xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+					version="2.5">    
+	
+	<!-- 
+		web.xml :: Web-Application Deployment Descriptor 
+		==> 서블릿 컨테이너에게 Web Application 구동에 필요한 정보를 설정::Meta-data(부가정보) 
+	-->
+
+	<!-- HelloServlet.class의 논리적 이름 정의 :  HelloServlet -->
+	<servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>spring.base.HelloServlet</servlet-class>
+    </servlet>
+
+	<!-- 논리적 이름 HelloServlet을  URL Pattern 지정 -->
+   <servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/HelloServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
